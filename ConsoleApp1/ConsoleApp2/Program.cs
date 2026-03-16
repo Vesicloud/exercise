@@ -27,9 +27,9 @@ if (choice.ToLower() == "yes") {
     Console.WriteLine("The regular menu will apply");
  }else Console.WriteLine("Unable to decide reference");
 
-*/
 
-using System.Text.RegularExpressions;
+
+
 
 Console.WriteLine("Write some text:");
 string text = Console.ReadLine();
@@ -41,4 +41,30 @@ foreach (string word in textArray)
         Console.WriteLine("Error 103: unable to process");
     }
 } 
+*/
+Console.WriteLine("Enter an email address:");
+string email = Console.ReadLine();
+string[] emailArray = email.Split(".");
+if (email.Length < 10)
+{
+    Console.WriteLine("Invalid email address");
+}
 
+else if ((!emailArray.EndsWith(".se")) && emailArray.EndsWith(".com")){
+    Console.WriteLine("accepted email address must end with .se or .com");
+}
+
+Console.WriteLine(" Enter a password:");
+
+string password = Console.ReadLine();
+bool passwordCheck = password.Length < 7;
+
+if (passwordCheck)
+{
+    Console.WriteLine("The password must be at least 7 characters or longer");
+}
+
+
+else{
+    Console.WriteLine("An account has been created successfully");
+}
