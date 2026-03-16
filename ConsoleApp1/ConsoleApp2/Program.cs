@@ -1,4 +1,5 @@
-﻿// 1
+﻿/*
+// 1
 Console.WriteLine("Enter a instrument:");
 string instrument = Console.ReadLine();
 Console.WriteLine($"Can you play {instrument}?");
@@ -17,4 +18,12 @@ string fullname = Console.ReadLine();
 string[] fullnamesplit = fullname.Split(' ');
 
 Console.WriteLine($"{fullnamesplit[0].ToUpper()}  {fullnamesplit[1].ToLower()} : present");
-// hello world
+// hello world*/
+Console.WriteLine("Do you have glutten intolerance?");
+string choice = Console.ReadLine();
+if (choice.ToLower() == "yes") {
+    Console.WriteLine("You will be served gluttenfree food");
+ }else if (choice.ToLower() == "no") {
+    Console.WriteLine("The regular menu will apply");
+ }else Console.WriteLine("Unable to decide reference");
+
