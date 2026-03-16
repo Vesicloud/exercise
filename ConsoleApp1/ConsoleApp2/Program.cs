@@ -17,3 +17,4 @@ string fullname = Console.ReadLine();
 string[] fullnamesplit = fullname.Split(' ');
 
 Console.WriteLine($"{fullnamesplit[0].ToUpper()}  {fullnamesplit[1].ToLower()} : present");
+// hello world

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vesta\\RiderProjects\\ConsoleApp1\\ConsoleApp2\\ConsoleApp2.csproj": {}
+    "C:\\Users\\vesta\\RiderProjects\\C-sharp\\ConsoleApp1\\ConsoleApp2\\ConsoleApp2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vesta\\RiderProjects\\ConsoleApp1\\ConsoleApp2\\ConsoleApp2.csproj": {
+    "C:\\Users\\vesta\\RiderProjects\\C-sharp\\ConsoleApp1\\ConsoleApp2\\ConsoleApp2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vesta\\RiderProjects\\ConsoleApp1\\ConsoleApp2\\ConsoleApp2.csproj",
+        "projectUniqueName": "C:\\Users\\vesta\\RiderProjects\\C-sharp\\ConsoleApp1\\ConsoleApp2\\ConsoleApp2.csproj",
         "projectName": "ConsoleApp2",
-        "projectPath": "C:\\Users\\vesta\\RiderProjects\\ConsoleApp1\\ConsoleApp2\\ConsoleApp2.csproj",
+        "projectPath": "C:\\Users\\vesta\\RiderProjects\\C-sharp\\ConsoleApp1\\ConsoleApp2\\ConsoleApp2.csproj",
         "packagesPath": "C:\\Users\\vesta\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vesta\\RiderProjects\\ConsoleApp1\\ConsoleApp2\\obj\\",
+        "outputPath": "C:\\Users\\vesta\\RiderProjects\\C-sharp\\ConsoleApp1\\ConsoleApp2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vesta\\AppData\\Roaming\\NuGet\\NuGet.Config"
