@@ -81,7 +81,7 @@ else
 {
     Console.WriteLine("sentence accepted");
 }
-*/
+
 Console.WriteLine("Enter your name:");
 string name =Console.ReadLine();
 Console.WriteLine($"Welcome {name}!");
@@ -89,3 +89,10 @@ if (name.StartsWith("Lord"))
 {
     Console.WriteLine("Welcome Your Exellency");
 }
+*/
+int totalMoney = 0;
+int[] moneyAmount = [5506, 291, 500, 482, 963];
+foreach (int money in moneyAmount){
+    totalMoney += money;
+}
+Console.WriteLine($"Total money is {totalMoney}");
