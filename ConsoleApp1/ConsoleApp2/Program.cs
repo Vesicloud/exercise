@@ -41,7 +41,7 @@ foreach (string word in textArray)
         Console.WriteLine("Error 103: unable to process");
     }
 } 
-*/
+
 Console.WriteLine("Enter an email address:");
 string email = Console.ReadLine();
 string[] emailArray = email.Split(".");
@@ -67,4 +67,17 @@ if (passwordCheck)
 
 else{
     Console.WriteLine("An account has been created successfully");
+}
+*/
+Console.WriteLine("Énter a sentence:");
+string sentence = Console.ReadLine();
+string[] words = sentence.Split(' ');
+int wordsCount = words.Length;
+if (wordsCount < 7)
+{
+    Console.WriteLine("Not a correct sentence.");
+}
+else
+{
+    Console.WriteLine("sentence accepted");
 }
