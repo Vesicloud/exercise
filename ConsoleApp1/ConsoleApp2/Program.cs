@@ -68,7 +68,7 @@ if (passwordCheck)
 else{
     Console.WriteLine("An account has been created successfully");
 }
-*/
+
 Console.WriteLine("Énter a sentence:");
 string sentence = Console.ReadLine();
 string[] words = sentence.Split(' ');
@@ -80,4 +80,12 @@ if (wordsCount < 7)
 else
 {
     Console.WriteLine("sentence accepted");
+}
+*/
+Console.WriteLine("Enter your name:");
+string name =Console.ReadLine();
+Console.WriteLine($"Welcome {name}!");
+if (name.StartsWith("Lord"))
+{
+    Console.WriteLine("Welcome Your Exellency");
 }
