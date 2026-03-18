@@ -89,10 +89,31 @@ if (name.StartsWith("Lord"))
 {
     Console.WriteLine("Welcome Your Exellency");
 }
-*/
+
 int totalMoney = 0;
 int[] moneyAmount = [5506, 291, 500, 482, 963];
 foreach (int money in moneyAmount){
     totalMoney += money;
 }
 Console.WriteLine($"Total money is {totalMoney}");
+*/
+
+Console.WriteLine("Enter a sentence:");
+string sentence = Console.ReadLine();
+string[] word = sentence.Split(' ');
+string transformedSentence = "";
+for (int i = 0; i < word.Length; i++ )
+    
+{
+    if (i % 2 == 0)
+    {
+        word[i] = word[i].ToUpper();
+        transformedSentence += word[i] + " ";
+    }
+    else
+    {
+        word[i] = word[i].ToLower();
+        transformedSentence += word[i] + " ";
+    }
+}
+Console.WriteLine(transformedSentence);
