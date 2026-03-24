@@ -312,7 +312,7 @@ void CheckPassword()
         Console.WriteLine("Login failed");
     }
 }
-*/
+
 using System;
 
 
@@ -355,4 +355,50 @@ void PerformLogin(string[][] userList)
     {
         Console.WriteLine("Login failed");
     }
+}
+*/
+using System;
+
+string[][] users = [["john", "plate"], ["michelle", "bike"], ["lisa", "pencil"]];
+
+
+string[] inputs = GetUserInput();
+bool isAuthorized = ValidateCredentials(inputs[0], inputs[1], users);
+
+if (isAuthorized)
+{
+    Console.WriteLine("Success");
+}
+else
+{
+    Console.WriteLine("Login failed");
+}
+
+
+string[] GetUserInput()
+{
+    Console.WriteLine("Enter your username:");
+    string user = Console.ReadLine();
+    Console.WriteLine("Enter your password:");
+    string pass = Console.ReadLine();
+    return [user, pass];
+}
+
+bool ValidateCredentials(string username, string password, string[][] userList)
+{
+    int userMatch = -1;
+    for (int i = 0; i < userList.Length; i++)
+    {
+        if (userList[i][0] == username.ToLower())
+        {
+            userMatch = i;
+        }
+    }
+
+    if (userMatch > -1)
+    {
+        return password.ToLower() == userList[userMatch][1];
+    }
+    
+    return false;
 }
