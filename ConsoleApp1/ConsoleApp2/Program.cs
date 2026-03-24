@@ -1,4 +1,4 @@
-﻿using System;
+﻿
 /*
 // 1
 Console.WriteLine("Enter a instrument:");
@@ -153,7 +153,7 @@ if (!string.IsNullOrEmpty(text))
 }
 
 
-*/
+
 
 
 
@@ -221,7 +221,7 @@ if (Console.ReadLine()?.ToLower() == "y") { finalPrice += 1.00; extras += ", Spe
 
 
 Console.WriteLine($"\nOrder: {drinkName} {sizeName}{extras}, {finalPrice:F2}");
-/*
+
 int credits = 100;
 int lives = 3;
 Random randomizer = new Random();
@@ -289,4 +289,7 @@ if (credits <= 0) Console.WriteLine("Reason: You ran out of credits.");
 
 Console.WriteLine($"Final Credit Score: {credits}");
 
-    */
+*/
+
+
+Console.WriteLine("Hello, World!");
