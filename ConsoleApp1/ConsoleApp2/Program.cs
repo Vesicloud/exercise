@@ -1,4 +1,5 @@
-﻿
+﻿using System;
+
 /*
 // 1
 Console.WriteLine("Enter a instrument:");
@@ -289,7 +290,69 @@ if (credits <= 0) Console.WriteLine("Reason: You ran out of credits.");
 
 Console.WriteLine($"Final Credit Score: {credits}");
 
+
+
+
+CheckPassword();
+
+
+void CheckPassword()
+{
+    Console.WriteLine("Enter your password:");
+    string password = Console.ReadLine();
+    
+    bool passwordMatch = password.ToLower() == "pencil";
+
+    if (passwordMatch)
+    {
+        Console.WriteLine("Success");
+    }
+    else
+    {
+        Console.WriteLine("Login failed");
+    }
+}
 */
+using System;
 
 
-Console.WriteLine("Hello, World!");
+string[][] users = [["john", "plate"], ["michelle", "bike"], ["lisa", "pencil"]];
+
+
+PerformLogin(users);
+
+
+void PerformLogin(string[][] userList)
+{
+    Console.WriteLine("Enter your username:");
+    string username = Console.ReadLine();
+
+    Console.WriteLine("Enter your password:");
+    string password = Console.ReadLine();
+
+    int userMatch = -1;
+
+    for (int i = 0; i < userList.Length; i++)
+    {
+        if (userList[i][0].ToLower() == username.ToLower())
+        {
+            userMatch = i;
+        }
+    }
+
+    bool passwordMatch = false;
+
+    if (userMatch > -1)
+    {
+        passwordMatch = password.ToLower() == userList[userMatch][1].ToLower();
+    }
+
+    if (passwordMatch)
+    {
+        Console.WriteLine("Success");
+    }
+    else
+    {
+        Console.WriteLine("Login failed");
+    }
+}
