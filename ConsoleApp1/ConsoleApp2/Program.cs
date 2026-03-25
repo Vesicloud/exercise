@@ -448,7 +448,7 @@ bool ValidateCredentials(string username, string password, string[][] userList)
     
     return false;
 }
-*/
+
 using System;
 string [] someWords = ["Hi", "promise", "Tobias", "everyoneisgood"];
 int longest = GetLongestStringLength(someWords);
@@ -466,4 +466,21 @@ int GetLongestStringLength(string[] words)
             
     }
     return maxLength;
+}
+*/
+using System;
+bool result = IsSumGreater(10,9, 20);
+Console.WriteLine($"Is the sum bigger?{result}");
+
+bool IsSumGreater(int first, int second, int third)
+{
+    int sum = first + second;
+    if (sum > third)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
