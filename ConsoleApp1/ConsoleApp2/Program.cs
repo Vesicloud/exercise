@@ -402,7 +402,7 @@ bool ValidateCredentials(string username, string password, string[][] userList)
     
     return false;
 }
-*/
+
 using System;
 
 string[][] users = [["john", "plate"], ["michelle", "bike"], ["lisa", "pencil"]];
@@ -447,4 +447,23 @@ bool ValidateCredentials(string username, string password, string[][] userList)
     }
     
     return false;
+}
+*/
+using System;
+string [] someWords = ["Hi", "promise", "Tobias", "everyoneisgood"];
+int longest = GetLongestStringLength(someWords);
+Console.WriteLine($"The length of the longest string is :{longest}");
+
+int GetLongestStringLength(string[] words)
+{
+    int maxLength = 0;
+    foreach (string word in words)
+    {
+        if (word.Length > maxLength)
+        {
+            maxLength = word.Length;
+        }
+            
+    }
+    return maxLength;
 }
