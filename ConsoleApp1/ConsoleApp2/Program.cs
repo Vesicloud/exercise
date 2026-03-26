@@ -500,4 +500,100 @@ class Program
         // int days = currentEmployee.VacationDays();
     }
 }
-*/
+
+using System;
+using System.Collections.Generic;
+List<string> names = new List<string>{"Ali", "Tobias", "Amin", "Jigar"};
+names.Sort();
+foreach (string name in names)
+{
+    Console.WriteLine(name);
+}
+
+using System;
+using System.Collections.Generic;
+using ConsoleApp2;
+
+
+List<Tool> designerTools = new List<Tool>
+{
+    new Tool { Brand = "Versace", Name = "Golden Hammer" },
+    new Tool { Brand = "Gucci", Name = "Leather Tape Measure" },
+    new Tool { Brand = "Boss", Name = "Silver Wrench" }
+};
+designerTools.RemoveAt(1);
+foreach (Tool tool in designerTools){
+    Console.WriteLine(tool.Brand);
+    }
+    designerTools.Add(new Tool { Brand = "Dior", Name = "Sauvage" });
+    designerTools.Add(new Tool { Brand = "YSL", Name = "Libre" });
+
+    foreach (Tool tool in designerTools)
+    {
+        if (tool.Name == "Sauvage")
+            Console.WriteLine($"The found perfume is :{tool.Brand} {tool.Name}");
+    }
+    
+    //Tool brokenTool = null;
+    //Console.WriteLine(brokenTool.Brand);
+    //Tool phantomTool = designerTools[50];
+    
+    int money = 100;
+    int people = 0;
+    int result = money / people;
+    Console.WriteLine(result);
+    
+
+using System;
+Console.WriteLine("Enter a whole number:");
+string input = Console.ReadLine();
+try
+{
+int userNumber = int.Parse(input);
+Console.WriteLine($"Success! You entered the number:{userNumber}");
+}
+catch (Exception ex)
+{
+    Console.WriteLine("--- An error occured ---");
+    Console.WriteLine(ex.Message);
+}
+Console.WriteLine("The program is still running...");
+try
+{
+    int salary = 100;
+    int tax = 0;
+    int result = salary / tax;
+
+}
+catch (DivideByZeroException ex)
+{
+    Console.WriteLine("--- Zero Division Error ---");
+    Console.WriteLine(ex.Message);
+}
+
+    */
+int[] numbers = {10, 0};
+
+try
+{
+
+    Console.WriteLine("Outer Try block started");
+
+    try
+    {
+        int result = numbers[0] / numbers[1];
+
+    }
+    catch (DivideByZeroException ex)
+    {
+        Console.WriteLine($"0 division Error:{ex.Message
+        }");
+        throw;
+
+        
+    }int absolutNumber = numbers[5];
+}
+catch (IndexOutOfRangeException ex)
+{
+    Console.WriteLine($"0 division Error:{ex.Message}");
+}
