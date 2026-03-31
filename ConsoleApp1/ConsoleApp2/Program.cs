@@ -36,15 +36,29 @@ if (choice.ToLower() == "yes") {
 
 
 Console.WriteLine("Write some text:");
-string text = Console.ReadLine();
+string input = Console.ReadLine();
+string cleanText = input.Replace(" ", "");
 string[] textArray = ["drop", "data", "base"];
+bool foundBadWord = false;
 foreach (string word in textArray)
 {
-    if (text.Contains(word))
+    if (cleanText.Contains(word))
     {
-        Console.WriteLine("Error 103: unable to process");
+        foundBadWord = true;
+        break;
     }
-} 
+    
+}
+
+if (foundBadWord)
+{
+    Console.WriteLine("Error 103: unable to process");
+    
+}
+else
+{
+    Console.WriteLine("proceed successfully!");
+}
 
 Console.WriteLine("Enter an email address:");
 string email = Console.ReadLine();
@@ -623,7 +637,7 @@ else
 {
     Console.WriteLine("Username or password is incorrect.");
 }
-*/
+
 HangmanGame game = new HangmanGame();
 Console.WriteLine("Welcome to Hangman Game!");
 while (!game.IsGameOver)
@@ -642,4 +656,29 @@ if (game.Won)
 else
 {
     Console.WriteLine($" \nGAME OVER! The word was: {game.GetSecretWord()}");
+}
+*/
+Console.WriteLine("Write some text:");
+string input = Console.ReadLine();
+string cleanText = input.Replace(" ", "");
+string[] textArray = ["drop", "data", "base"];
+bool foundBadWord = false;
+foreach (string word in textArray)
+{
+    if (cleanText.Contains(word))
+    {
+        foundBadWord = true;
+        break;
+    }
+    
+}
+
+if (foundBadWord)
+{
+    Console.WriteLine("Error 103: unable to process");
+    
+}
+else
+{
+    Console.WriteLine("proceed successfully!");
 }
