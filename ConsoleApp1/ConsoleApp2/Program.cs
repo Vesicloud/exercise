@@ -599,7 +599,7 @@ catch (IndexOutOfRangeException ex)
 {
     Console.WriteLine($"0 division Error:{ex.Message}");
 }
-*/
+
 
 UserManager manager = new UserManager();
 Console.WriteLine("--- Welcome to the System ---");
@@ -622,4 +622,24 @@ if (success)
 else
 {
     Console.WriteLine("Username or password is incorrect.");
+}
+*/
+HangmanGame game = new HangmanGame();
+Console.WriteLine("Welcome to Hangman Game!");
+while (!game.IsGameOver)
+{
+    game.ShowStatus();
+    Console.Write("Enter a letter or guess the whole word: ");
+    string input = Console.ReadLine();
+    game.MakeGuess(input);
+}
+
+if (game.Won)
+{
+    game.ShowStatus();
+    Console.WriteLine("\nCONGRATULATIONS! You won!");
+}
+else
+{
+    Console.WriteLine($" \nGAME OVER! The word was: {game.GetSecretWord()}");
 }
