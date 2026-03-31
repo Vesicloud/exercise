@@ -4,15 +4,9 @@ public class Tool
 {
     public string Brand  { get; set; }
     public string Name { get; set; }
-
-    public Tool(string brand, string name)
+    public string GetFullDescription() 
     {
-        Brand = brand;
-        Name = name;
+        return $"{Brand} {Name}";
     }
-
-    public Tool()
-    {
-        
-    }
+ 
 }

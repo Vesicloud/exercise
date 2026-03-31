@@ -1,3 +1,14 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=cb5d1c60_002D168b_002D494c_002Dbdbd_002D8755ca1dd4b2/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from UnitTest1.cs" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Or&gt;&#xD;
+    &lt;ProjectFile&gt;045B506B-7041-47B3-853E-B0D49BAB4E6F/f:UnitTest1.cs&lt;/ProjectFile&gt;&#xD;
+    &lt;ProjectFile&gt;045B506B-7041-47B3-853E-B0D49BAB4E6F/f:ExerciseTests.cs&lt;/ProjectFile&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;xUnit::045B506B-7041-47B3-853E-B0D49BAB4E6F::net10.0::ConsoleApp2Unit.Tests.UserTests.SignInShouldNotWork&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::045B506B-7041-47B3-853E-B0D49BAB4E6F::net10.0::ConsoleApp2Unit.Tests.UserTests.SignUpShouldNotWork&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::045B506B-7041-47B3-853E-B0D49BAB4E6F::net10.0::ConsoleApp2Unit.Tests.UserTests&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+  &lt;/Or&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
 	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=f4364a25_002Df456_002D4442_002D96d2_002D220142342297_0023ConsoleApp1/@EntryIndexedValue">True</s:Boolean>
 	</wpf:ResourceDictionary>

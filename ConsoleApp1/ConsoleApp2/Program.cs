@@ -1,5 +1,7 @@
 ﻿using System;
+using ConsoleApp2;
 
+System.Console.WriteLine("System Ready.");
 /*
 // 1
 Console.WriteLine("Enter a instrument:");
@@ -571,7 +573,7 @@ catch (DivideByZeroException ex)
     Console.WriteLine(ex.Message);
 }
 
-    */
+    
 int[] numbers = {10, 0};
 
 try
@@ -596,4 +598,28 @@ try
 catch (IndexOutOfRangeException ex)
 {
     Console.WriteLine($"0 division Error:{ex.Message}");
+}
+*/
+
+UserManager manager = new UserManager();
+Console.WriteLine("--- Welcome to the System ---");
+Console.WriteLine("SIGN UP PHASE");
+Console.Write("Enter a new email");
+string? email = Console.ReadLine();
+Console.Write("Enter a password");
+string? password = Console.ReadLine();
+manager.SignIn(email?? "", password?? "");
+Console.WriteLine("\nSIGN IN PHASE");
+Console.Write("Enter your email:");
+string? loginEmail = Console.ReadLine();
+Console.Write("Enter your password:");
+string? loginPassword = Console.ReadLine();
+bool success = manager.SignIn(loginEmail?? "", loginPassword?? "");
+if (success)
+{
+    Console.WriteLine("Successfully logged in!");
+}
+else
+{
+    Console.WriteLine("Username or password is incorrect.");
 }

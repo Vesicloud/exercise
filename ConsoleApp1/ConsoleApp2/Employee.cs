@@ -18,6 +18,10 @@
         decimal tax = this.salary * 0.3m * (20- vacationDays);
         return tax;
     }
+    public double CalculateBonus(double salary) 
+    {
+        return salary * 0.1; // 10% bonus
+    }
 
     private int VacationDays() => 21;
 }
