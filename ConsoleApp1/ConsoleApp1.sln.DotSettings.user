@@ -7,6 +7,7 @@
       &lt;TestId&gt;xUnit::045B506B-7041-47B3-853E-B0D49BAB4E6F::net10.0::ConsoleApp2Unit.Tests.UserTests.SignInShouldNotWork&lt;/TestId&gt;&#xD;
       &lt;TestId&gt;xUnit::045B506B-7041-47B3-853E-B0D49BAB4E6F::net10.0::ConsoleApp2Unit.Tests.UserTests.SignUpShouldNotWork&lt;/TestId&gt;&#xD;
       &lt;TestId&gt;xUnit::045B506B-7041-47B3-853E-B0D49BAB4E6F::net10.0::ConsoleApp2Unit.Tests.UserTests&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::045B506B-7041-47B3-853E-B0D49BAB4E6F::net10.0::CalculatorTests.CalculatorTests.Divide_ByZero_ShouldReturnZero&lt;/TestId&gt;&#xD;
     &lt;/TestAncestor&gt;&#xD;
   &lt;/Or&gt;&#xD;
 &lt;/SessionState&gt;</s:String>

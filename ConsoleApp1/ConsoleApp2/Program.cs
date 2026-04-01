@@ -1,6 +1,6 @@
 ﻿using System;
 using ConsoleApp2;
-
+using CalculatorApp;
 System.Console.WriteLine("System Ready.");
 /*
 // 1
@@ -657,15 +657,16 @@ else
 {
     Console.WriteLine($" \nGAME OVER! The word was: {game.GetSecretWord()}");
 }
-*/
+
 Console.WriteLine("Write some text:");
 string input = Console.ReadLine();
 string cleanText = input.Replace(" ", "");
 string[] textArray = ["drop", "data", "base"];
+string toLowerCleanText = cleanText.ToLower();
 bool foundBadWord = false;
 foreach (string word in textArray)
 {
-    if (cleanText.Contains(word))
+    if (toLowerCleanText.Contains(word))
     {
         foundBadWord = true;
         break;
@@ -681,4 +682,71 @@ if (foundBadWord)
 else
 {
     Console.WriteLine("proceed successfully!");
+}
+*/
+
+Calculator calc = new Calculator();
+bool keepRunning = true;
+while (keepRunning)
+{
+    Console.WriteLine("\n--- Calculator Menu ---");
+    Console.WriteLine("1. Add");
+    Console.WriteLine("2. Subtract");
+    Console.WriteLine("3. Multiply");
+    Console.WriteLine("4. Divide");
+   
+    Console.WriteLine("5.SquareRoot");
+    Console.WriteLine("6.Power");
+    Console.WriteLine("7.Exist");
+    Console.WriteLine("Select a choice:");
+    string choice = Console.ReadLine();
+    if (choice == "7") {
+        Console.WriteLine("Calculator is closed");
+        keepRunning = false; continue;
+        
+    }
+    if (choice == "5")
+    {
+        Console.WriteLine("enter the a number:");
+        double number = double.Parse(Console.ReadLine());
+        Console.WriteLine($"Result:{calc.SquareRoot(number)}");
+    }
+    else if (choice == "1" || choice == "2" || choice == "3" || choice == "4" || choice == "6")
+    {
+           
+        Console.WriteLine("enter the first number:");
+        double firstNumber = double.Parse(Console.ReadLine());
+        Console.WriteLine("enter the second number:");
+        double secondNumber = double.Parse(Console.ReadLine());
+        
+        try
+        {
+            if (choice == "4")
+            {
+               
+            }
+        }
+        catch (DivideByZeroException ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+
+        }
+        catch (FormatException)
+        {
+            Console.WriteLine($"Error: Please enter valid numbers.");
+        }
+        switch (choice)
+        {
+            case "1": Console.WriteLine($"Result: {calc.Add(firstNumber, secondNumber)}"); break;
+            case "2": Console.WriteLine($"Result:{calc.Subtract(firstNumber, secondNumber)}"); break;
+            case "3": Console.WriteLine($"Result:{calc.Multiply(firstNumber, secondNumber)}"); break;
+            case "4": Console.WriteLine($"Result:{calc.Divide(firstNumber, secondNumber)}"); break;
+            case "5": Console.WriteLine($"Result:{calc.Power(firstNumber, secondNumber)}"); break;
+        
+            default: Console.WriteLine("Invalid choice"); break;
+        }
+    }
+
+
+    
 }
