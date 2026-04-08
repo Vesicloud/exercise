@@ -1,7 +1,9 @@
 ﻿
 
+using ConsoleApp2;
+
 namespace CalculatorApp;
-public class Calculator
+public class Calculator : ICalculator
 {
     public double Add(double a, double b) => a + b;
     public double Subtract(double a, double b) => a - b;

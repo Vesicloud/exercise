@@ -685,7 +685,7 @@ else
 }
 */
 
-Calculator calc = new Calculator();
+ICalculator calc = new Calculator();
 bool keepRunning = true;
 while (keepRunning)
 {
@@ -749,4 +749,11 @@ while (keepRunning)
 
 
     
+}
+List<IResettable> thingsToReset = new List<IResettable>();
+thingsToReset.Add(new Counter());
+thingsToReset.Add(new UserSession());
+foreach (IResettable item in thingsToReset)
+{
+    item.Reset();
 }
