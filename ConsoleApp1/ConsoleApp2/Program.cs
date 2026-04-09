@@ -683,7 +683,7 @@ else
 {
     Console.WriteLine("proceed successfully!");
 }
-*/
+
 
 ICalculator calc = new Calculator();
 bool keepRunning = true;
@@ -757,3 +757,10 @@ foreach (IResettable item in thingsToReset)
 {
     item.Reset();
 }
+*/
+
+
+HandHeld drill = new HandHeld(new DateOnly(2026,5,20), 500.0,2.5);
+Console.WriteLine(drill.BookService());
+Machine machineDrill = drill;
+Console.WriteLine(machineDrill.BookService());
