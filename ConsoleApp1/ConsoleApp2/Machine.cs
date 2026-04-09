@@ -13,4 +13,9 @@ public class Machine
     {
         return "Manager needs to approve";
     }
+
+    public virtual string Operate()
+    {
+        return "the machine is starting up ...";
+    }
 }

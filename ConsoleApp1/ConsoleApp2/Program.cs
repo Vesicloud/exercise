@@ -757,10 +757,33 @@ foreach (IResettable item in thingsToReset)
 {
     item.Reset();
 }
-*/
+
 
 
 HandHeld drill = new HandHeld(new DateOnly(2026,5,20), 500.0,2.5);
 Console.WriteLine(drill.BookService());
 Machine machineDrill = drill;
 Console.WriteLine(machineDrill.BookService());
+*/
+List<Machine> workshop = new List<Machine>();
+workshop.Add(new HandHeld(new DateOnly(2026,10,1), 500, 2.5));
+workshop.Add(new Embedded(new DateOnly(2026,12,12),50, "Smart Home Controller"));
+Console.WriteLine("--- Checking Machine Types ---");
+foreach (var item in workshop)
+{
+    if (item is HandHeld)
+    {
+        Console.WriteLine("This is a portable HandHeld device");
+        
+    }
+    else if (item is Embedded)
+    {
+        Console.WriteLine("This is a fixed embedded system");
+    }
+}
+
+Console.WriteLine("---  Operating Machines---");
+foreach (var item in workshop)
+{
+    Console.WriteLine(item.Operate());
+}
