@@ -1,7 +1,10 @@
 ﻿using System;
 using ConsoleApp2;
 using CalculatorApp;
+using System.Text.Json;
+using System.Linq;
 System.Console.WriteLine("System Ready.");
+
 /*
 // 1
 Console.WriteLine("Enter a instrument:");
@@ -764,7 +767,7 @@ HandHeld drill = new HandHeld(new DateOnly(2026,5,20), 500.0,2.5);
 Console.WriteLine(drill.BookService());
 Machine machineDrill = drill;
 Console.WriteLine(machineDrill.BookService());
-*/
+
 List<Machine> workshop = new List<Machine>();
 workshop.Add(new HandHeld(new DateOnly(2026,10,1), 500, 2.5));
 workshop.Add(new Embedded(new DateOnly(2026,12,12),50, "Smart Home Controller"));
@@ -786,4 +789,61 @@ Console.WriteLine("---  Operating Machines---");
 foreach (var item in workshop)
 {
     Console.WriteLine(item.Operate());
+}
+*/
+List<Concert> concerts = new List<Concert>();
+try
+{
+    string concertData = File.ReadAllText("C:\\Users\\vesta\\RiderProjects\\C-sharp\\ConsoleApp1\\ConsoleApp2\\concert_data.json");
+    concerts = JsonSerializer.Deserialize<List<Concert>>(concertData);
+    if (concerts != null && concerts.Count > 0)
+    {
+        var first =  concerts[0];
+        Console.WriteLine($"Loaded {concerts.Count} concerts.");
+        Console.WriteLine($"First Performer: {first.Performer}");
+        Console.WriteLine($"Date: {first.Date.ToShortDateString()}");
+    }
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"Oops! Something went wrong: {ex.Message}");
+    
+}
+
+DateTime now = DateTime.Now;
+List<Concert> futureConserts = concerts
+    .Where(c => c.Date >= now)
+    .OrderBy(c => c.Date)
+    .ToList();
+
+Console.WriteLine($"--- Future Concerts:(from {now.ToShortDateString()})---");
+foreach (var c in futureConserts)
+{
+    Console.WriteLine($" {c.Date.ToShortDateString()}-{c.Performer}");
+}
+
+List<Concert> reducedVenueConerts = concerts.Where(c => c.ReducedVenue == true).ToList();
+Console.WriteLine($"--- Reduced Venue Concerts :({reducedVenueConerts.Count} found)---");
+foreach (var c in reducedVenueConerts)
+{
+    Console.WriteLine($" Venue: [Reduced] Performer: {c.Performer}");
+}
+
+List<Concert> concerts2024 = concerts.Where(c => c.Date.Year == 2024).ToList();
+Console.WriteLine($"--- Concerts in 2024 {concerts2024.Count} found ---");
+foreach (var c in concerts2024)
+{
+    Console.WriteLine($" {c.Date.ToShortDateString()}-{c.Performer}");
+}
+List<int> biggestProjectSales = concerts.OrderByDescending(c => c.FullCapacitySales).Select(c => c.FullCapacitySales).Take(5).ToList();
+Console.WriteLine("Top 5 Sales Figures");
+foreach (var sales in biggestProjectSales)
+{
+    Console.WriteLine($"{sales:N0} tickets");
+}
+List<Concert> fridayConcerts = concerts.Where(c => c.Date.DayOfWeek == DayOfWeek.Friday).ToList();
+Console.WriteLine($" Friday Concerts ({fridayConcerts.Count} found)");
+foreach (var c in fridayConcerts)
+{
+    Console.WriteLine($" {c.Date:D}-{c.Performer}");
 }
